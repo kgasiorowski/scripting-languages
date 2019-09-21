@@ -8,12 +8,24 @@
 
 def duplicates(installed):
 
+    # Duplicate executable list
     dupes_list = []
-    program_list = [program[program.rfind('/'):] for program in installed]
 
-    for i in range(len(program_list)):
-        if program_list[i] in program_list[:i] + program_list[i+1:] and program_list[i] not in dupes_list:
-            dupes_list.append(program_list[i])
+    # Remove duplicate paths
+    program_list = []
+    for path in installed:
+        if path not in program_list:
+            program_list.append(path)
+
+    # Extract the name of the programs from the paths
+    program_list = [program[program.rfind('/')+1:] for program in program_list]
+
+    temp = []
+    for program in program_list:
+        if program not in temp:
+            temp.append(program)
+        elif program not in dupes_list:
+            dupes_list.append(program)
 
     return dupes_list
 
@@ -38,4 +50,8 @@ if __name__ == "__main__":
     print()
     print(duplicates(["/usr/bin/echo", "/bin/screen", "/usr/bin/rm", "/opt/local/bin/grep", "/usr/local/bin/talk", "/opt/local/bin/echo", "/bin/awk", "/bin/vi", "/usr/bin/vi", "/usr/bin/touch", "/bin/make", "/bin/su", "/usr/bin/less", "/opt/local/bin/quota", "/usr/local/bin/grep", "/opt/local/bin/w", "/usr/local/bin/vi", "/bin/sed", "/usr/local/bin/touch", "/bin/emacs"]))
     print()
-
+    print('\n')
+    print('Testing duplicates(["/usr/bin/echo", "/usr/bin/echo"]):')
+    print()
+    print(duplicates(["/usr/bin/echo", "/usr/bin/echo"]))
+    print()
