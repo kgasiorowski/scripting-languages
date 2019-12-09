@@ -45,4 +45,18 @@ if __name__ == "__main__":
     print(count_failed_addresses("test-log-4.txt"))
     print()
 
+    print("auth.log.1 produced the dictionary:")
+    print(count_failed_addresses("auth.log.1"))
+    print()
 
+    print("auth.log.2 produced the dictionary:")
+    print(count_failed_addresses("auth.log.2"))
+    print()
+
+    print("auth.log.3 produced the dictionary:")
+    print(count_failed_addresses("auth.log.3"))
+    print()
+
+    print("auth.log.4 produced the dictionary:")
+    print(count_failed_addresses("auth.log.4"))
+    print()

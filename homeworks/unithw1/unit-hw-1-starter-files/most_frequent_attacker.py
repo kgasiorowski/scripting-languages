@@ -1,6 +1,6 @@
-# PUT YOUR NAME HERE
-# PUT YOUR SBU ID NUMBER HERE
-# PUT YOUR NETID (BLACKBOARD USERNAME) HERE
+# Kuba Gasiorowski
+# 109776237
+# kgasiorowski
 #
 # CSE 337 (Fall 2019)
 # Unit Homework 1
@@ -18,20 +18,36 @@ def most_frequent_attacker(addresses):
 # CHANGE THE FUNCTION CALLS TO TEST YOUR WORK WITH
 # DIFFERENT INPUT VALUES.
 if __name__ == "__main__":
-    print("The most frequent attacks in test-log-1.txt came from:")
+    print("test-log-1.txt produced the dictionary:")
     print(most_frequent_attacker("test-log-1.txt"))
     print()
 
-    print("The most frequent attacks in test-log-2.txt came from:")
+    print("test-log-2.txt produced the dictionary:")
     print(most_frequent_attacker("test-log-2.txt"))
     print()
 
-    print("The most frequent attacks in test-log-3.txt came from:")
+    print("test-log-3.txt produced the dictionary:")
     print(most_frequent_attacker("test-log-3.txt"))
     print()
 
-    print("The most frequent attacks in test-log-4.txt came from:")
+    print("test-log-4.txt produced the dictionary:")
     print(most_frequent_attacker("test-log-4.txt"))
+    print()
+
+    print("auth.log.1 produced the dictionary:")
+    print(most_frequent_attacker("auth.log.1"))
+    print()
+
+    print("auth.log.2 produced the dictionary:")
+    print(most_frequent_attacker("auth.log.2"))
+    print()
+
+    print("auth.log.3 produced the dictionary:")
+    print(most_frequent_attacker("auth.log.3"))
+    print()
+
+    print("auth.log.4 produced the dictionary:")
+    print(most_frequent_attacker("auth.log.4"))
     print()
 
 
